@@ -1,5 +1,7 @@
-@import url(_variables.scss);
-@import url(_normalize.scss);
-@import url(_layout.scss);
-@import url(_typography.scss);
-@import url(_global.scss);
+@import 'normalize';
+@import 'bootstrap';
+@import 'variables';
+@import 'layout';
+@import 'global';
+@import 'typography';
+@import 'icons';
