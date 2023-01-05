@@ -1,0 +1,120 @@
+.header {
+  position: relative;
+  height: 100vh;
+  background-image: url('../../images/background.png');
+  background-position: center;
+  background-size: cover;
+  color: $lightColor;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $darkColor;
+    opacity: 0.6;
+  }
+
+  .nav {
+    padding: 1.6em;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    &-title {
+      font-size: 1.9rem;
+      margin-bottom: 0.2em;
+      letter-spacing: 0.4em;
+      font-weight: 900;
+    }
+
+    &-subtitle {
+      font-size: 1rem;
+      letter-spacing: 0.3em;
+      font-weight: 700;
+    }
+
+    &-options {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .nav-option {
+        padding: 0.8em;
+        font-size: 1.1rem;
+        color: $lightColor;
+        text-decoration: none;
+        border: 1px solid transparent;
+        transition: $transition;
+
+        &:hover {
+          color: $primaryColor;
+          border: 1px solid $primaryColor;
+        }
+      }
+    }
+  }
+
+  .page-title-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    color: $primaryColor;
+    font-size: 3rem;
+    letter-spacing: 0.4em;
+
+    .page-title {
+      margin: 0;
+    }
+
+    .page-title-one {
+      text-align: left;
+    }
+
+    .page-title-two {
+      text-align: right;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -1em;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 25%;
+      height: 7px;
+      background: $primaryColor;
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    &-text {
+      font-size: 1.8rem;
+      margin-bottom: 1em;
+      letter-spacing: 0.2em;
+    }
+
+    &-icon {
+      font-size: 2.8em;
+      transition: $transition;
+      cursor: pointer;
+
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}
