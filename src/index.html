@@ -24,9 +24,9 @@
           <p class="nav-subtitle">Venezuela coffee beans</p>
         </div>
         <div class="nav-options">
-          <a href="#" class="nav-option">Home</a>
-          <a href="#" class="nav-option">Products</a>
-          <a href="#" class="nav-option">Contact</a>
+          <a href="#home" class="nav-option">Home</a>
+          <a href="#products" class="nav-option">Products</a>
+          <a href="#contact" class="nav-option">Contact</a>
         </div>
       </div>
       <div class="page-title-wrapper">
@@ -38,8 +38,38 @@
         <i class="dropdown-icon icon-arrow"></i>
       </div>
     </div>
-
   </header>
+
+  <div id="pages">
+    <section id="products" class="page-section">
+      <div id="products-list" class="products-list"></div>
+    </section>
+    <section id="home" class="page-section active">
+      <div id="home-wrapper" class="home-wrapper"></div>
+    </section>
+    <section id="contact" class="page-section">
+      <div id="contact-wrapper" class="contact-wrapper"></div>
+    </section>
+  </div>
+
+  <script id="template-products-page" type="text/x-handlebars-template">
+    <div class="products">
+      <h2 class="section-title">Products</h2>
+    </div>
+  </script>
+
+  <script id="template-home-page" type="text/x-handlebars-template">
+    <div class="home">
+      <h2 class="section-title">Home</h2>
+    </div>
+  </script>
+
+  <script id="template-contact-page" type="text/x-handlebars-template">
+    <div class="contact">
+      <h2 class="section-title">Contact</h2>
+    </div>
+
+  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script type="module" src="js/script.js"></script>
