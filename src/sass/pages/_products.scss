@@ -1,0 +1,59 @@
+.products-card {
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-between;
+
+  &-info {
+    padding-top: 3em;
+    width: 40%;
+
+    .card-title {
+      margin-bottom: 0.5em;
+      font-size: 2.4em;
+      letter-spacing: 0.1em;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .card-info-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3em;
+
+      .card-title-line {
+        margin-top: 0.5em;
+        margin-left: 0.4em;
+        border-top: 3px solid $primaryColor;
+        width: 25%;
+      }
+
+      .card-text {
+        width: 70%;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: $grayColor;
+      }
+    }
+
+    .rating {
+      margin-left: 1em;
+      margin-bottom: 0.5em;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      &-number {
+        color: $primaryColor;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .products-card-img {
+    box-shadow: 0 0 35px $darkColor;
+  }
+}
+
+.card-two {
+  flex-direction: row-reverse;
+}

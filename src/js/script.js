@@ -6,10 +6,7 @@ import Home from './components/Home.js';
 const app = {
   initPages: function () {
     const thisApp = this;
-    thisApp.pages = document.querySelector(select.containerOf.pages).children;
-    console.log(thisApp.pages);
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
-    console.log(thisApp.navLinks);
 
     for (let link of thisApp.navLinks) {
       link.addEventListener('click', function (event) {
@@ -23,9 +20,10 @@ const app = {
   },
 
   activePage: function (id) {
-    for (const page of document.querySelectorAll(select.containerOf.pages)) {
-      console.log(document.querySelectorAll(select.containerOf.pages));
-      console.log(page);
+    const thisApp = this;
+    thisApp.pages = document.querySelector(select.containerOf.pages).children;
+
+    for (const page of thisApp.pages) {
       page.classList.remove(classNames.active);
     }
     document.querySelector('#' + id).classList.add(classNames.active);
@@ -33,19 +31,29 @@ const app = {
   },
 
   initData: function () {
+    const thisApp = this;
+
     const url = settings.db.url + '/' + settings.db.products;
-    this.data = {};
+    thisApp.data = {};
+
     fetch(url)
       .then(rawResponse => {
         return rawResponse.json();
       })
       .then(parsedResponse => {
-        this.data.products = parsedResponse;
+        thisApp.data.products = parsedResponse;
       });
   },
 
   initProducts: function () {
     const thisApp = this;
+
+    console.log(thisApp.data.products);
+
+    // for (let productData in thisApp.data.products) {
+    //   new Products(thisApp.data.products[productData].id, thisApp.data.products[productData]);
+    // }
+
     const productsPage = document.querySelector(select.templateOf.productsPage);
     thisApp.products = new Products(productsPage);
   },
@@ -66,10 +74,10 @@ const app = {
     const thisApp = this;
 
     thisApp.initData();
+    thisApp.initPages();
     thisApp.initProducts();
     thisApp.initContact();
     thisApp.initHome();
-    thisApp.initPages();
   },
 };
 

@@ -5,7 +5,7 @@ export const select = {
     contactPage: '#template-contact-page',
   },
   containerOf: {
-    pages: '#home, #products, #contact',
+    pages: '#pages',
     home: '#home-wrapper',
     products: '#products-list',
     contact: '#contact-wrapper',

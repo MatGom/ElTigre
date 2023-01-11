@@ -4,8 +4,32 @@ body {
 
 .page-section {
   display: none;
+  height: 100vh;
+  font-family: $mainFont;
 }
 
 .page-section.active {
   display: block;
+}
+
+.section-title {
+  position: relative;
+  margin: 1.5em auto 3em auto;
+  text-align: center;
+  font-size: 3.2rem;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+  text-transform: uppercase;
+  color: $primaryColor;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -0.6em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    height: 5px;
+    background: $primaryColor;
+  }
 }

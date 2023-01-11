@@ -7,10 +7,11 @@ class Products {
 
     thisProducts.render();
   }
-
+  
   render() {
     const thisProducts = this;
-
+    console.log(thisProducts.data);
+    
     const generatedHTML = templates.productsPage(thisProducts.data);
     thisProducts.element = utils.createDOMFromHTML(generatedHTML);
     const productsContainer = document.querySelector(select.containerOf.products);
