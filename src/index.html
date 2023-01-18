@@ -11,6 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -52,9 +53,47 @@
     </section>
   </div>
 
-  <div class="about-us"></div>
+  <div class="about-us">
+    <div class="about-us-carousel">
+      <div class="carousel-cell">
+        <h3 class="carousel-title">About us</h3>
+        <div class="carousel-wrapper">
+          <img src="./images/1.png" alt="Picture of Ping Nihao" class="carousel-img">
+          <div class="carousel-text">
+            <p class="carousel-person-name">Ping <span>Nihao</span></p>
+            <p class="carousel-info">Ping is the youngest in the team. He doesn't like calling coffee a mysterious
+              act. He says, a good coffee is like a mathematical formula. Once you figured it out, every coffee you
+              make is masterpiece.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <h3 class="carousel-title">About us</h3>
+        <div class="carousel-wrapper">
+          <img src="./images/2.png" alt="Picture of Max Selfish" class="carousel-img">
+          <div class="carousel-text">
+            <p class="carousel-person-name">Max <span>Selfish</span></p>
+            <p class="carousel-info">Max is the austrian barista with years of experience from the hotels across the
+              whole Europe. "Venezuela coffee was a lightening experience for me! I have never drunk such an amazing
+              coffee!", he says.</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <h3 class="carousel-title">About us</h3>
+        <div class="carousel-wrapper">
+          <img src="./images/3.png" alt="Picture of Elizabeth Doherty" class="carousel-img">
+          <div class="carousel-text">
+            <p class="carousel-person-name">Elizabeth <span>Doherty</span></p>
+            <p class="carousel-info">Experienced barista from Bahamas. She says that Venezuela has opened her eyes on
+              coffee. "It's not about the taste", she says. "It's all about the feelings".</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <div class="footer">&copy 2021 EL TIGRE inc.</div>
+  <div class="footer">&amp;copy 2021 EL TIGRE inc.</div>
 
   <script id="template-products-page" type="text/x-handlebars-template">
     <div class="products">
@@ -130,6 +169,25 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+  <script>
+    setTimeout(function () {
+      var elem = document.querySelector('.about-us-carousel');
+      var flkty = new Flickity(elem, {
+        // options
+        cellAlign: 'left',
+        contain: true
+      });
+
+      // element argument can be a selector string
+      //   for an individual element
+      var flkty = new Flickity('.about-us-carousel', {
+        // options
+      });
+    }, 100)
+  </script>
+
   <script type="module" src="js/script.js"></script>
 </body>
 
