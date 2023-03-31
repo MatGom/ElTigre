@@ -4,9 +4,44 @@
   align-items: center;
 
   .page-subtitle {
+    width: 100%;
     font-size: 6rem;
     letter-spacing: 0.2em;
+    text-align: center;
     text-transform: uppercase;
     font-weight: 900;
+  }
+}
+
+@media (max-width: 1200px) {
+  .home {
+    .page-subtitle {
+      font-size: 5rem;
+      letter-spacing: 0.1em;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .home {
+    .page-subtitle {
+      font-size: 4rem;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .home {
+    .page-subtitle {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    .page-subtitle {
+      font-size: 2.4rem;
+    }
   }
 }
