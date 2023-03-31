@@ -71,6 +71,8 @@
 
     .page-title {
       margin: 0;
+      margin-right: 0.5em;
+      margin-left: 0.5em;
     }
 
     .page-title-one {
@@ -102,6 +104,10 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
 
+    .arrow-link {
+      text-decoration: none;
+    }
+
     .arrow-link:visited {
       color: $lightColor;
     }
@@ -110,6 +116,12 @@
       font-size: 1.8rem;
       margin-bottom: 1em;
       letter-spacing: 0.2em;
+      transition: $transition;
+      cursor: pointer;
+
+      &:hover {
+        color: $primaryColor;
+      }
     }
 
     &-icon {
@@ -119,6 +131,93 @@
 
       &:hover {
         color: $primaryColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .page-title {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 1244px) {
+  .page-title {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 930px) {
+  .header {
+    .page-title-wrapper {
+      .page-title {
+        font-size: 1.2em;
+      }
+
+      .page-title-one,
+      .page-title-two {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    .page-title-wrapper {
+      .page-title {
+        font-size: 1em;
+      }
+
+      .page-title-one,
+      .page-title-two {
+        text-align: center;
+      }
+    }
+
+    .nav {
+      &-title {
+        font-size: 1.6rem;
+      }
+
+      &-subtitle {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    .page-title-wrapper {
+      .page-title {
+        font-size: 0.8em;
+      }
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+
+      &-title {
+        text-align: center;
+        font-size: 1.4rem;
+      }
+
+      &-subtitle {
+        text-align: center;
+        font-size: 0.6rem;
+      }
+    }
+
+    .dropdown {
+      &-text {
+        font-size: 1.4rem;
+      }
+
+      &-icon {
+        font-size: 2.4rem;
       }
     }
   }
