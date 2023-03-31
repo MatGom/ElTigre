@@ -54,3 +54,39 @@
     }
   }
 }
+
+@media (max-width: 1400px) {
+  .about-us-wrapper {
+    .about-us-text {
+      .about-us-info {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .about-us {
+    height: 50vh;
+    min-height: 500px;
+  }
+
+  .about-us-wrapper {
+    .about-us-text {
+      .about-us-info {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .about-us-wrapper {
+    .about-us-text {
+      width: 75%;
+      .about-us-info {
+        font-size: 1rem;
+      }
+    }
+  }
+}
