@@ -15,6 +15,7 @@ const app = {
         const id = clickedElement.getAttribute('href').replace('#', '');
 
         thisApp.activePage(id);
+        console.log(id);
       });
     }
   },
@@ -27,7 +28,7 @@ const app = {
       page.classList.remove(classNames.active);
     }
     document.querySelector('#' + id).classList.add(classNames.active);
-    window.location.hash = `#/${id}`;
+    window.location.hash = `${id}`;
   },
 
   initData: function () {

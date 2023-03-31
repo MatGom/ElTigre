@@ -17,6 +17,11 @@
     &-textarea {
       padding: 1em;
       border: 3px solid $darkColor;
+      outline: 0px solid $darkColor;
+
+      &:focus {
+        border: 3px solid $primaryColor;
+      }
     }
 
     &-input {
