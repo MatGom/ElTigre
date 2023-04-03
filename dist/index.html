@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElTigre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="nav">
+        <div class="nav-title-wrapper">
+          <h2 class="nav-title">El Tigre</h2>
+          <p class="nav-subtitle">Venezuela coffee beans</p>
+        </div>
+        <div class="nav-options">
+          <a href="#home" class="nav-option">Home</a>
+          <a href="#products" class="nav-option">Products</a>
+          <a href="#contact" class="nav-option">Contact</a>
+        </div>
+      </div>
+      <div class="page-title-wrapper">
+        <h1 class="page-title page-title-one">Home of</h1>
+        <h1 class="page-title page-title-two">original tastes</h1>
+      </div>
+      <div class="dropdown">
+        <a href="#aboutus" class="arrow-link">
+          <p class="dropdown-text">Discover</p>
+          <i class="dropdown-icon icon-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div id="pages">
+    <section id="products" class="page-section">
+      <div id="products-list" class="products-list"></div>
+    </section>
+    <section id="home" class="page-section active">
+      <div id="home-wrapper" class="home-wrapper"></div>
+    </section>
+    <section id="contact" class="page-section">
+      <div id="contact-wrapper" class="contact-wrapper"></div>
+    </section>
+  </div>
+
+  <div class="about-us" id="aboutus">
+    <div class="about-us-wrapper">
+      <h3 class="section-title about-us-title">About us</h3>
+      <div class="about-us-text">
+        <p class="about-us-info">Who are we? Just a bunch of friends with a love for a good cofee and desire to create
+          something new, something original.</p>
+        <p class="about-us-info">Our coffees reflect us - young, wild and free. We are on the journey of new tastes...
+        </p>
+        <p class="about-us-info about-us-info-last">Join us!</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">© 2021 EL TIGRE inc.</div>
+
+  <script id="template-products-page" type="text/x-handlebars-template">
+    <div class="products">
+      <div class="container">
+        <h2 class="section-title">Products</h2>
+        <div class="products-wrapper">
+          <div class="products-card card-one">
+            <div class="products-card-info">
+              <h3 class="card-title">01. La Lagartija</h3>
+              <div class="card-info-wrapper">
+                <div class="card-title-line"></div>
+                <p class="card-text">Mysterious and treacherous... The best choice for the start of your journey! It will provide you a rich delicious flavor.</p>
+              </div>
+              <p class="rating">Roasting: <span class="rating-number">5/10</span></p>
+              <p class="rating">Intensity: <span class="rating-number">6/10</span></p>
+            </div>           
+            <img class="products-card-img" src="./images/coffee-1.png" alt="la lagartija coffee">   
+          </div>
+          <div class="products-card card-two">
+            <div class="products-card-info">
+              <h3 class="card-title">02. El Tigre</h3>
+              <div class="card-info-wrapper">
+                <div class="card-title-line"></div>
+                <p class="card-text">Really dark coffee, only for the real gourmets. It has bitter flavor of grapefruits and is mixed with a little bit of peanuts with caramel.</p>
+              </div>
+              <p class="rating">Roasting: <span class="rating-number">8/10</span></p>
+              <p class="rating">Intensity: <span class="rating-number">9/10</span></p>
+            </div>
+            <img class="products-card-img" src="./images/coffee-2.png" alt="el tigre coffee">
+          </div>
+          <div class="products-card card-three">
+            <div class="products-card-info">
+              <h3 class="card-title">03. La Cucaracha</h3>
+              <div class="card-info-wrapper">
+                <div class="card-title-line"></div>
+                <p class="card-text">Sweet and intense with a big amount of different flavors. Caramel, grapes, strawberry, you name it! It's great choice for warm summer days.</p>
+              </div>
+              <p class="rating">Roasting: <span class="rating-number">3/10</span></p>
+              <p class="rating">Intensity: <span class="rating-number">7/10</span></p>
+            </div>
+            <img class="products-card-img" src="./images/coffee-3.png" alt="la cucaracha coffee">
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script id="template-home-page" type="text/x-handlebars-template">
+    <div class="home">
+      <div class="container">
+        <h2 class="section-title">Home</h2>
+        <h3 class="page-subtitle">Work in progress</h3>
+      </div>
+    </div>
+  </script>
+
+  <script id="template-contact-page" type="text/x-handlebars-template">
+    <div class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <form class="contact-form">
+          <label for="name" class="contact-form-label">Name</label>
+          <input type="text" class="contact-form-input">
+          <label for="title" class="contact-form-label">Title</label>
+          <input type="text" class="contact-form-input">
+          <label for="message" class="contact-form-label">Message</label>
+          <textarea name="message" id="" cols="30" rows="10" class="contact-form-textarea"></textarea>
+          <input type="submit" class="contact-form-btn">
+        </form>
+      </div>
+    </div>
+  </script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
